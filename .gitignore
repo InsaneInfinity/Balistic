@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+bin/
+obj/
+balistic_log.txt
+*.pdf
