@@ -11,6 +11,7 @@ app = Flask(__name__)
 # === KONFIGURACJA ===
 USER_DB = {"admin": "admin"}
 API_KEY_WEATHER = os.getenv("WEATHER_API_KEY", "")
+CESIUM_TOKEN = os.getenv("CESIUM_TOKEN", "")
 SESSION_TOKEN = secrets.token_hex(16)
 
 CEP = {
@@ -1445,7 +1446,7 @@ var cesiumActive = false;
 
 async function initCesium() {
     if (cesiumViewer) return;
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwZWVjYzZmNC05ZGJiLTRmZmUtODZhNy0xMTQ4N2Q3YWRjMjciLCJpZCI6NDA4Mzk4LCJpYXQiOjE3NzQzNTgwNjJ9.jRy76Dmg5cGwxstJqYqSM4YkK-tNoI4fsMp541OdEhk';
+    Cesium.Ion.defaultAccessToken = '{{cesium_token}}';
     cesiumViewer = new Cesium.Viewer('cesium', {
         terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(1),
         baseLayerPicker: false,
@@ -3355,6 +3356,7 @@ def index():
     html = html.replace("{{lat}}", str(state["my_pos"]["lat"]))
     html = html.replace("{{lon}}", str(state["my_pos"]["lon"]))
     html = html.replace("{{token}}", SESSION_TOKEN)
+    html = html.replace("{{cesium_token}}", CESIUM_TOKEN)
     return html
 
 @app.route('/sysinfo')
