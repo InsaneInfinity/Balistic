@@ -5,3 +5,5 @@ bin/
 obj/
 balistic_log.txt
 *.pdf
+srtm_cache/
+download_srtm_tiles.py

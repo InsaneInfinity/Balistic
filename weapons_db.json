@@ -1,0 +1,3392 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "BALISTIC V5 weapons database — burnout/RV simulation parameters",
+    "sources": [
+      "CSIS Missile Defense Project",
+      "FAS",
+      "Jane's Weapons Strategic",
+      "Wikipedia",
+      "astronautix.com"
+    ],
+    "schema": {
+      "launch_mass_kg": "Masa startowa całej rakiety/pocisku (kg)",
+      "sim_mass_kg": "Masa do symulacji lotu: burnout mass (SRBM/MRBM) lub RV mass (ICBM) lub masa pocisku (artyleria)",
+      "sim_area_m2": "Przekrój poprzeczny do symulacji aerodynamiki (m²)",
+      "sim_cd": "Współczynnik oporu aerodynamicznego (bezwymiarowy)",
+      "v0_effective": "Prędkość na burnout/skuteczna (m/s)",
+      "trajectory": "Typ trajektorii: artillery|guided_artillery|ballistic_missile|cruise|flat",
+      "cep_m": "Circular Error Probable (m)",
+      "range_km": "[min_km, max_km] zasięg bojowy",
+      "blast_radius_m": "Promień rażenia (m)"
+    }
+  },
+  "weapons": {
+    "M107 HE": {
+      "launcher": "AHS KRAB (155mm)",
+      "launcher_id": 1,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm HE shell"
+    },
+    "EXCALIBUR": {
+      "launcher": "AHS KRAB (155mm)",
+      "launcher_id": 1,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 827.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        10.0,
+        57.0
+      ],
+      "blast_radius_m": 50,
+      "note": "GPS guided, lower Cd due to boat-tail"
+    },
+    "HE STD": {
+      "launcher": "M120 RAK (120mm)",
+      "launcher_id": 2,
+      "launch_mass_kg": 13.5,
+      "sim_mass_kg": 13.5,
+      "sim_area_m2": 0.0113,
+      "sim_cd": 0.4,
+      "v0_effective": 354.0,
+      "trajectory": "artillery",
+      "cep_m": 80.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "120mm mortar bomb"
+    },
+    "SMOKE": {
+      "launcher": "M120 RAK (120mm)",
+      "launcher_id": 2,
+      "launch_mass_kg": 13.0,
+      "sim_mass_kg": 13.0,
+      "sim_area_m2": 0.0113,
+      "sim_cd": 0.42,
+      "v0_effective": 320.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "120mm smoke"
+    },
+    "APFSDS": {
+      "launcher": "LEOPARD 2 (120mm)",
+      "launcher_id": 3,
+      "launch_mass_kg": 4.6,
+      "sim_mass_kg": 4.6,
+      "sim_area_m2": 0.0007,
+      "sim_cd": 0.05,
+      "v0_effective": 1650.0,
+      "trajectory": "flat",
+      "cep_m": 20.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "120mm penetrator d≈30mm"
+    },
+    "HEAT": {
+      "launcher": "LEOPARD 2 (120mm)",
+      "launcher_id": 3,
+      "launch_mass_kg": 13.5,
+      "sim_mass_kg": 13.5,
+      "sim_area_m2": 0.0113,
+      "sim_cd": 0.38,
+      "v0_effective": 1140.0,
+      "trajectory": "flat",
+      "cep_m": 40.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "120mm HEAT"
+    },
+    "ATACMS-A": {
+      "launcher": "ATACMS (MGM-140)",
+      "launcher_id": 4,
+      "launch_mass_kg": 1659.0,
+      "sim_mass_kg": 745,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.28,
+      "v0_effective": 1766.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 250.0,
+      "range_km": [
+        25.0,
+        165.0
+      ],
+      "blast_radius_m": 50,
+      "note": "burnout: 1659kg start, 560kg WH, ~45% prop"
+    },
+    "ATACMS-B": {
+      "launcher": "ATACMS (MGM-140)",
+      "launcher_id": 4,
+      "launch_mass_kg": 1659.0,
+      "sim_mass_kg": 480,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.25,
+      "v0_effective": 1500.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 9.0,
+      "range_km": [
+        70.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Block IA: lighter warhead 160kg, longer burn"
+    },
+    "ATACMS-Cluster": {
+      "launcher": "ATACMS (MGM-140)",
+      "launcher_id": 4,
+      "launch_mass_kg": 1659.0,
+      "sim_mass_kg": 745,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.28,
+      "v0_effective": 1766.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 250.0,
+      "range_km": [
+        25.0,
+        165.0
+      ],
+      "blast_radius_m": 50,
+      "note": "burnout same as Block I"
+    },
+    "GMLRS": {
+      "launcher": "HIMARS (GMLRS)",
+      "launcher_id": 5,
+      "launch_mass_kg": 302.0,
+      "sim_mass_kg": 130,
+      "sim_area_m2": 0.0405,
+      "sim_cd": 0.3,
+      "v0_effective": 1115.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        15.0,
+        90.0
+      ],
+      "blast_radius_m": 50,
+      "note": "302kg start, 90kg WH, single-stage solid ~57% prop"
+    },
+    "GMLRS-ER": {
+      "launcher": "HIMARS (GMLRS)",
+      "launcher_id": 5,
+      "launch_mass_kg": 310.0,
+      "sim_mass_kg": 135,
+      "sim_area_m2": 0.0405,
+      "sim_cd": 0.28,
+      "v0_effective": 1496.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        15.0,
+        150.0
+      ],
+      "blast_radius_m": 50,
+      "note": "ER: slightly bigger motor"
+    },
+    "PrSM": {
+      "launcher": "PrSM (MGM-168)",
+      "launcher_id": 6,
+      "launch_mass_kg": 400.0,
+      "sim_mass_kg": 180,
+      "sim_area_m2": 0.0434,
+      "sim_cd": 0.2,
+      "v0_effective": 2434.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        60.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "~400kg start, ~55% propellant"
+    },
+    "PAC-3 MSE": {
+      "launcher": "PATRIOT PAC-3",
+      "launcher_id": 7,
+      "launch_mass_kg": 312.0,
+      "sim_mass_kg": 312,
+      "sim_area_m2": 0.0507,
+      "sim_cd": 0.18,
+      "v0_effective": 1700.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "interceptor, flies whole body"
+    },
+    "SM-3": {
+      "launcher": "SM-3 (przechwytywacz)",
+      "launcher_id": 8,
+      "launch_mass_kg": 750.0,
+      "sim_mass_kg": 750,
+      "sim_area_m2": 0.0908,
+      "sim_cd": 0.15,
+      "v0_effective": 3000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "interceptor, exo"
+    },
+    "Lance": {
+      "launcher": "Lance (MGM-52)",
+      "launcher_id": 9,
+      "launch_mass_kg": 1285.0,
+      "sim_mass_kg": 570,
+      "sim_area_m2": 0.2463,
+      "sim_cd": 0.35,
+      "v0_effective": 900.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 450.0,
+      "range_km": [
+        5.0,
+        130.0
+      ],
+      "blast_radius_m": 50,
+      "note": "1285kg start, 454kg WH, liquid prop ~56%"
+    },
+    "Minuteman-III": {
+      "launcher": "Minuteman III (ICBM) ☢",
+      "launcher_id": 30,
+      "launch_mass_kg": 35300.0,
+      "sim_mass_kg": 340,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 6700,
+      "trajectory": "ballistic_missile",
+      "cep_m": 120.0,
+      "range_km": [
+        1200.0,
+        13000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mk-12A RV: 340kg, d=0.54m"
+    },
+    "Trident-II": {
+      "launcher": "Trident II D5 (SLBM) ☢",
+      "launcher_id": 31,
+      "launch_mass_kg": 59000.0,
+      "sim_mass_kg": 360,
+      "sim_area_m2": 0.2376,
+      "sim_cd": 0.05,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 90.0,
+      "range_km": [
+        1000.0,
+        12000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mk-5 RV W88: 360kg, d=0.55m"
+    },
+    "9M723": {
+      "launcher": "ISKANDER-M",
+      "launcher_id": 10,
+      "launch_mass_kg": 3750.0,
+      "sim_mass_kg": 940,
+      "sim_area_m2": 0.6648,
+      "sim_cd": 0.25,
+      "v0_effective": 2203.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3750kg start, ~700kg WH, prop frac ~0.75"
+    },
+    "9M723-Cluster": {
+      "launcher": "ISKANDER-M",
+      "launcher_id": 10,
+      "launch_mass_kg": 3750.0,
+      "sim_mass_kg": 940,
+      "sim_area_m2": 0.6648,
+      "sim_cd": 0.25,
+      "v0_effective": 2203.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "cluster variant, same burnout"
+    },
+    "Tochka-U": {
+      "launcher": "Tochka-U",
+      "launcher_id": 11,
+      "launch_mass_kg": 2000.0,
+      "sim_mass_kg": 560,
+      "sim_area_m2": 0.3318,
+      "sim_cd": 0.3,
+      "v0_effective": 1100.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 150.0,
+      "range_km": [
+        15.0,
+        185.0
+      ],
+      "blast_radius_m": 50,
+      "note": "2010kg start, 482kg WH, prop ~72%"
+    },
+    "Tochka-Cluster": {
+      "launcher": "Tochka-U",
+      "launcher_id": 11,
+      "launch_mass_kg": 2010.0,
+      "sim_mass_kg": 560,
+      "sim_area_m2": 0.3318,
+      "sim_cd": 0.3,
+      "v0_effective": 1100.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 150.0,
+      "range_km": [
+        15.0,
+        185.0
+      ],
+      "blast_radius_m": 50,
+      "note": "cluster variant"
+    },
+    "Scud-B": {
+      "launcher": "Scud-B (R-17)",
+      "launcher_id": 12,
+      "launch_mass_kg": 5900.0,
+      "sim_mass_kg": 1800,
+      "sim_area_m2": 0.6082,
+      "sim_cd": 0.3,
+      "v0_effective": 1600.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 450.0,
+      "range_km": [
+        50.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "5900kg start, 985kg WH, liquid prop ~70%"
+    },
+    "Scud-B-Cluster": {
+      "launcher": "Scud-B (R-17)",
+      "launcher_id": 12,
+      "launch_mass_kg": 5900.0,
+      "sim_mass_kg": 1800,
+      "sim_area_m2": 0.6082,
+      "sim_cd": 0.3,
+      "v0_effective": 1600.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 450.0,
+      "range_km": [
+        50.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "cluster WH"
+    },
+    "Kinzal": {
+      "launcher": "Kinżał (MiG-31K)",
+      "launcher_id": 13,
+      "launch_mass_kg": 4000.0,
+      "sim_mass_kg": 4000,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.04,
+      "v0_effective": 4000.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "air-launched ballistic"
+    },
+    "Kalibr": {
+      "launcher": "Kalibr (3M14)",
+      "launcher_id": 14,
+      "launch_mass_kg": 1780.0,
+      "sim_mass_kg": 1780,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3M14: 1780kg"
+    },
+    "Oniks": {
+      "launcher": "Oniks (P-800)",
+      "launcher_id": 15,
+      "launch_mass_kg": 3000.0,
+      "sim_mass_kg": 3000,
+      "sim_area_m2": 0.3526,
+      "sim_cd": 0.02,
+      "v0_effective": 750.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        600.0
+      ],
+      "blast_radius_m": 50,
+      "note": "P-800: 3000kg"
+    },
+    "Rubezh": {
+      "launcher": "RS-26 Rubezh",
+      "launcher_id": 16,
+      "launch_mass_kg": 36000.0,
+      "sim_mass_kg": 340,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 6770,
+      "trajectory": "ballistic_missile",
+      "cep_m": 20.0,
+      "range_km": [
+        2000.0,
+        6000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV RV est"
+    },
+    "Sarmat": {
+      "launcher": "Sarmat (RS-28) ☢",
+      "launcher_id": 17,
+      "launch_mass_kg": 210000.0,
+      "sim_mass_kg": 800,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.06,
+      "v0_effective": 7300,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        2000.0,
+        18000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV RV est ~800kg, d=0.6m"
+    },
+    "Bulava": {
+      "launcher": "Bulava (RSM-56) ☢",
+      "launcher_id": 38,
+      "launch_mass_kg": 36800.0,
+      "sim_mass_kg": 360,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7883,
+      "trajectory": "ballistic_missile",
+      "cep_m": 120.0,
+      "range_km": [
+        800.0,
+        9300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "6 MIRV, each ~360kg"
+    },
+    "Sinewa": {
+      "launcher": "Sinewa (RSM-54) ☢",
+      "launcher_id": 39,
+      "launch_mass_kg": 40300.0,
+      "sim_mass_kg": 380,
+      "sim_area_m2": 0.2376,
+      "sim_cd": 0.06,
+      "v0_effective": 6800,
+      "trajectory": "ballistic_missile",
+      "cep_m": 250.0,
+      "range_km": [
+        700.0,
+        8300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "10 MIRV, each ~380kg"
+    },
+    "Yars": {
+      "launcher": "Yars (RS-24) ☢",
+      "launcher_id": 40,
+      "launch_mass_kg": 49600.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 20.0,
+      "range_km": [
+        2000.0,
+        12000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4-MIRV, each ~350kg"
+    },
+    "Topol-M": {
+      "launcher": "Topol-M (RS-12M2) ☢",
+      "launcher_id": 41,
+      "launch_mass_kg": 47200.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 200.0,
+      "range_km": [
+        2000.0,
+        11000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "single RV: ~350kg"
+    },
+    "Avangard": {
+      "launcher": "Avangard (HGV) ☢",
+      "launcher_id": 42,
+      "launch_mass_kg": 33000.0,
+      "sim_mass_kg": 1800,
+      "sim_area_m2": 1.131,
+      "sim_cd": 0.1,
+      "v0_effective": 6700,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        6000.0,
+        15000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "HGV glide vehicle"
+    },
+    "DF-11A": {
+      "launcher": "DF-11A (SRBM)",
+      "launcher_id": 18,
+      "launch_mass_kg": 6000.0,
+      "sim_mass_kg": 1500,
+      "sim_area_m2": 0.4418,
+      "sim_cd": 0.28,
+      "v0_effective": 2434.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 200.0,
+      "range_km": [
+        100.0,
+        600.0
+      ],
+      "blast_radius_m": 50,
+      "note": "6000kg start, prop ~75%"
+    },
+    "DF-21D": {
+      "launcher": "DF-21D (ASBM)",
+      "launcher_id": 19,
+      "launch_mass_kg": 14700.0,
+      "sim_mass_kg": 3675,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.18,
+      "v0_effective": 4250,
+      "trajectory": "ballistic_missile",
+      "cep_m": 20.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "14700kg start, prop ~75%"
+    },
+    "DF-17": {
+      "launcher": "DF-17 (HGV)",
+      "launcher_id": 20,
+      "launch_mass_kg": 13000.0,
+      "sim_mass_kg": 3250,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.12,
+      "v0_effective": 3000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        1000.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "13000kg start, HGV glider Cd low"
+    },
+    "DF-26": {
+      "launcher": "DF-26 (IRBM) ☢",
+      "launcher_id": 21,
+      "launch_mass_kg": 20000.0,
+      "sim_mass_kg": 5000,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.18,
+      "v0_effective": 5773,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        800.0,
+        4000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "20000kg start, ASBM/IRBM"
+    },
+    "DF-41": {
+      "launcher": "DF-41 (ICBM) ☢",
+      "launcher_id": 22,
+      "launch_mass_kg": 80000.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        3000.0,
+        14000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "10 MIRV, per-RV ~350kg"
+    },
+    "KN-23": {
+      "launcher": "KN-23 (SRBM)",
+      "launcher_id": 23,
+      "launch_mass_kg": 4000.0,
+      "sim_mass_kg": 1000,
+      "sim_area_m2": 0.6362,
+      "sim_cd": 0.25,
+      "v0_effective": 2000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        50.0,
+        690.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4000kg start, prop ~75%"
+    },
+    "Hwasong-12": {
+      "launcher": "Hwasong-12 (IRBM)",
+      "launcher_id": 24,
+      "launch_mass_kg": 18000.0,
+      "sim_mass_kg": 3600,
+      "sim_area_m2": 1.2272,
+      "sim_cd": 0.2,
+      "v0_effective": 6066,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1000.0,
+      "range_km": [
+        1000.0,
+        4500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "18000kg start, burnout ~20%"
+    },
+    "Hwasong-17": {
+      "launcher": "Hwasong-17 (ICBM) ☢",
+      "launcher_id": 25,
+      "launch_mass_kg": 80000.0,
+      "sim_mass_kg": 500,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.07,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1000.0,
+      "range_km": [
+        5000.0,
+        15000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV capable, per-RV est"
+    },
+    "Fateh-110": {
+      "launcher": "Fateh-110 (SRBM)",
+      "launcher_id": 26,
+      "launch_mass_kg": 3450.0,
+      "sim_mass_kg": 860,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.25,
+      "v0_effective": 1400.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        30.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3450kg start, prop ~75%"
+    },
+    "Zolfaghar": {
+      "launcher": "Zolfaghar (SRBM)",
+      "launcher_id": 27,
+      "launch_mass_kg": 3700.0,
+      "sim_mass_kg": 925,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.25,
+      "v0_effective": 1900.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        100.0,
+        700.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3700kg start"
+    },
+    "Shahab-3": {
+      "launcher": "Shahab-3 (MRBM)",
+      "launcher_id": 28,
+      "launch_mass_kg": 14500.0,
+      "sim_mass_kg": 3190,
+      "sim_area_m2": 1.1122,
+      "sim_cd": 0.22,
+      "v0_effective": 3488,
+      "trajectory": "ballistic_missile",
+      "cep_m": 190.0,
+      "range_km": [
+        300.0,
+        1300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "14500kg start, prop ~78%"
+    },
+    "Shahab-Cluster": {
+      "launcher": "Shahab-3 (MRBM)",
+      "launcher_id": 28,
+      "launch_mass_kg": 14500.0,
+      "sim_mass_kg": 3190,
+      "sim_area_m2": 1.1122,
+      "sim_cd": 0.22,
+      "v0_effective": 3488,
+      "trajectory": "ballistic_missile",
+      "cep_m": 300.0,
+      "range_km": [
+        300.0,
+        1300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "cluster variant"
+    },
+    "Khorramshahr": {
+      "launcher": "Khorramshahr (MRBM)",
+      "launcher_id": 29,
+      "launch_mass_kg": 22000.0,
+      "sim_mass_kg": 4840,
+      "sim_area_m2": 1.7671,
+      "sim_cd": 0.2,
+      "v0_effective": 4309,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        300.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "22000kg start"
+    },
+    "Khorramshahr-Cluster": {
+      "launcher": "Khorramshahr (MRBM)",
+      "launcher_id": 29,
+      "launch_mass_kg": 22000.0,
+      "sim_mass_kg": 4840,
+      "sim_area_m2": 1.7671,
+      "sim_cd": 0.2,
+      "v0_effective": 4309.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        300.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "cluster variant"
+    },
+    "Jericho-II": {
+      "launcher": "Jericho II (MRBM)",
+      "launcher_id": 32,
+      "launch_mass_kg": 14000.0,
+      "sim_mass_kg": 3150,
+      "sim_area_m2": 0.5809,
+      "sim_cd": 0.18,
+      "v0_effective": 3500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        500.0,
+        1500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "14000kg start"
+    },
+    "Jericho-III": {
+      "launcher": "Jericho III (ICBM) ☢",
+      "launcher_id": 33,
+      "launch_mass_kg": 30000.0,
+      "sim_mass_kg": 6750,
+      "sim_area_m2": 1.9113,
+      "sim_cd": 0.15,
+      "v0_effective": 6000,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        2000.0,
+        6500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "30000kg start"
+    },
+    "Prithvi-II": {
+      "launcher": "Prithvi-II (SRBM)",
+      "launcher_id": 34,
+      "launch_mass_kg": 4600.0,
+      "sim_mass_kg": 1100,
+      "sim_area_m2": 0.9503,
+      "sim_cd": 0.3,
+      "v0_effective": 1877.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 75.0,
+      "range_km": [
+        30.0,
+        350.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4600kg start, liquid prop"
+    },
+    "Agni-V": {
+      "launcher": "Agni-V (ICBM) ☢",
+      "launcher_id": 35,
+      "launch_mass_kg": 50000.0,
+      "sim_mass_kg": 400,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 6700,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        700.0,
+        5500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV, RV est"
+    },
+    "Shaheen-III": {
+      "launcher": "Shaheen-III (MRBM) ☢",
+      "launcher_id": 36,
+      "launch_mass_kg": 24000.0,
+      "sim_mass_kg": 5400,
+      "sim_area_m2": 0.7854,
+      "sim_cd": 0.2,
+      "v0_effective": 5000,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        500.0,
+        2750.0
+      ],
+      "blast_radius_m": 50,
+      "note": "24000kg start"
+    },
+    "M51": {
+      "launcher": "M51 (SLBM) ☢",
+      "launcher_id": 37,
+      "launch_mass_kg": 52000.0,
+      "sim_mass_kg": 360,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7941,
+      "trajectory": "ballistic_missile",
+      "cep_m": 150.0,
+      "range_km": [
+        3000.0,
+        10000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "French SLBM, 6 MIRV"
+    },
+    "DF-5B": {
+      "launcher": "DF-5B (ICBM) ☢",
+      "launcher_id": 43,
+      "launch_mass_kg": 183000.0,
+      "sim_mass_kg": 700,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 300.0,
+      "range_km": [
+        3000.0,
+        15000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4 MIRV, per-RV ~700kg"
+    },
+    "DF-31AG": {
+      "launcher": "DF-31AG (ICBM) ☢",
+      "launcher_id": 44,
+      "launch_mass_kg": 42000.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        3000.0,
+        11000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV, per-RV est"
+    },
+    "DF-4": {
+      "launcher": "DF-4 (ICBM) ☢",
+      "launcher_id": 45,
+      "launch_mass_kg": 82000.0,
+      "sim_mass_kg": 600,
+      "sim_area_m2": 0.2642,
+      "sim_cd": 0.07,
+      "v0_effective": 6000,
+      "trajectory": "ballistic_missile",
+      "cep_m": 500.0,
+      "range_km": [
+        2000.0,
+        7000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "single large RV ~600kg"
+    },
+    "DF-15B": {
+      "launcher": "DF-15B (SRBM)",
+      "launcher_id": 46,
+      "launch_mass_kg": 6200.0,
+      "sim_mass_kg": 1550,
+      "sim_area_m2": 0.7088,
+      "sim_cd": 0.25,
+      "v0_effective": 2961.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        200.0,
+        900.0
+      ],
+      "blast_radius_m": 50,
+      "note": "6200kg start"
+    },
+    "CJ-10": {
+      "launcher": "CJ-10 (Cruise)",
+      "launcher_id": 47,
+      "launch_mass_kg": 2500.0,
+      "sim_mass_kg": 2500,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "DH-10 ground launched"
+    },
+    "YJ-12": {
+      "launcher": "YJ-12 (ASM)",
+      "launcher_id": 48,
+      "launch_mass_kg": 2500.0,
+      "sim_mass_kg": 2500,
+      "sim_area_m2": 0.1257,
+      "sim_cd": 0.02,
+      "v0_effective": 1000.0,
+      "trajectory": "cruise",
+      "cep_m": 20.0,
+      "range_km": [
+        100.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mach 2+ AShM"
+    },
+    "DF-100": {
+      "launcher": "DF-100 (Cruise)",
+      "launcher_id": 49,
+      "launch_mass_kg": 2000.0,
+      "sim_mass_kg": 2000,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 300.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "CJ-100 supersonic"
+    },
+    "9K720": {
+      "launcher": "9K720 Iskander-K",
+      "launcher_id": 50,
+      "launch_mass_kg": 3800.0,
+      "sim_mass_kg": 960,
+      "sim_area_m2": 0.6648,
+      "sim_cd": 0.25,
+      "v0_effective": 2100.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        50.0,
+        280.0
+      ],
+      "blast_radius_m": 50,
+      "note": "export Iskander-E 3800kg start"
+    },
+    "Kh-47M2": {
+      "launcher": "Kh-47M2 Kinzhal ☢",
+      "launcher_id": 51,
+      "launch_mass_kg": 4000.0,
+      "sim_mass_kg": 4000,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.04,
+      "v0_effective": 3000.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "same as Kinzal"
+    },
+    "OTR-21": {
+      "launcher": "OTR-21 Tochka",
+      "launcher_id": 52,
+      "launch_mass_kg": 2000.0,
+      "sim_mass_kg": 560,
+      "sim_area_m2": 0.3318,
+      "sim_cd": 0.3,
+      "v0_effective": 900.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 150.0,
+      "range_km": [
+        15.0,
+        185.0
+      ],
+      "blast_radius_m": 50,
+      "note": "base Tochka"
+    },
+    "Tomahawk": {
+      "launcher": "BGM-109 Tomahawk",
+      "launcher_id": 53,
+      "launch_mass_kg": 1300.0,
+      "sim_mass_kg": 1300,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "generic Tomahawk"
+    },
+    "JASSM-ER": {
+      "launcher": "JASSM-ER (USAF)",
+      "launcher_id": 54,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 1100,
+      "sim_area_m2": 0.159,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        1000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM-158B: 1100kg"
+    },
+    "LRASM": {
+      "launcher": "LRASM (Navy)",
+      "launcher_id": 55,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.159,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        900.0
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM-158C: 900kg"
+    },
+    "Pershing-II": {
+      "launcher": "Pershing II ☢",
+      "launcher_id": 56,
+      "launch_mass_kg": 7400.0,
+      "sim_mass_kg": 1850,
+      "sim_area_m2": 0.8171,
+      "sim_cd": 0.18,
+      "v0_effective": 2800.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        150.0,
+        1800.0
+      ],
+      "blast_radius_m": 50,
+      "note": "7400kg start, MARV RV"
+    },
+    "SM-6": {
+      "launcher": "SM-6 (interceptor)",
+      "launcher_id": 57,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.0908,
+      "sim_cd": 0.18,
+      "v0_effective": 1700.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "interceptor"
+    },
+    "GLCM": {
+      "launcher": "GLCM BGM-109G ☢",
+      "launcher_id": 58,
+      "launch_mass_kg": 1200.0,
+      "sim_mass_kg": 1200,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 30.0,
+      "range_km": [
+        50.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "BGM-109G Gryphon"
+    },
+    "Storm-Shadow": {
+      "launcher": "Storm Shadow (UK)",
+      "launcher_id": 59,
+      "launch_mass_kg": 1300.0,
+      "sim_mass_kg": 1300,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        560.0
+      ],
+      "blast_radius_m": 50,
+      "note": "SCALP/Storm Shadow: 1300kg"
+    },
+    "Trident-II-UK": {
+      "launcher": "Trident II D5 (UK) ☢",
+      "launcher_id": 60,
+      "launch_mass_kg": 59000.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.05,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 90.0,
+      "range_km": [
+        1000.0,
+        12000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "UK Holbrook RV: ~320kg"
+    },
+    "Harpoon": {
+      "launcher": "Harpoon (UK Navy)",
+      "launcher_id": 61,
+      "launch_mass_kg": 650.0,
+      "sim_mass_kg": 650,
+      "sim_area_m2": 0.0908,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        10.0,
+        315.0
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM/RGM-84: 650kg"
+    },
+    "TAURUS": {
+      "launcher": "TAURUS KEPD 350",
+      "launcher_id": 62,
+      "launch_mass_kg": 1400.0,
+      "sim_mass_kg": 1400,
+      "sim_area_m2": 0.3117,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "KEPD 350: 1400kg"
+    },
+    "SCALP": {
+      "launcher": "SCALP-EG",
+      "launcher_id": 63,
+      "launch_mass_kg": 1300.0,
+      "sim_mass_kg": 1300,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 3.0,
+      "range_km": [
+        50.0,
+        560.0
+      ],
+      "blast_radius_m": 50,
+      "note": "French SCALP-EG"
+    },
+    "APACHE": {
+      "launcher": "APACHE",
+      "launcher_id": 64,
+      "launch_mass_kg": 780.0,
+      "sim_mass_kg": 780,
+      "sim_area_m2": 0.1018,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "APACHE AS-30: 780kg"
+    },
+    "SOM": {
+      "launcher": "SOM (Roketsan)",
+      "launcher_id": 65,
+      "launch_mass_kg": 600.0,
+      "sim_mass_kg": 600,
+      "sim_area_m2": 0.1452,
+      "sim_cd": 0.02,
+      "v0_effective": 260.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Turkish SOM-J cruise: ~600kg"
+    },
+    "Bora": {
+      "launcher": "Bora (MRBM)",
+      "launcher_id": 66,
+      "launch_mass_kg": 1900.0,
+      "sim_mass_kg": 475,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.28,
+      "v0_effective": 1000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        100.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "1900kg start"
+    },
+    "Kasirga": {
+      "launcher": "Kasirga (MRL)",
+      "launcher_id": 67,
+      "launch_mass_kg": 270.0,
+      "sim_mass_kg": 275,
+      "sim_area_m2": 0.0716,
+      "sim_cd": 0.35,
+      "v0_effective": 800.0,
+      "trajectory": "artillery",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "T-300 Kasirga 302mm"
+    },
+    "J-600T": {
+      "launcher": "J-600T Yıldırım",
+      "launcher_id": 68,
+      "launch_mass_kg": 1800.0,
+      "sim_mass_kg": 450,
+      "sim_area_m2": 0.3117,
+      "sim_cd": 0.28,
+      "v0_effective": 1000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        100.0,
+        900.0
+      ],
+      "blast_radius_m": 50,
+      "note": "1800kg start"
+    },
+    "TRG-300": {
+      "launcher": "TRG-300 Kasirga II",
+      "launcher_id": 69,
+      "launch_mass_kg": 600.0,
+      "sim_mass_kg": 600,
+      "sim_area_m2": 0.0707,
+      "sim_cd": 0.32,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Turkish 300mm"
+    },
+    "Hyunmoo-2C": {
+      "launcher": "Hyunmoo-2C (MRBM)",
+      "launcher_id": 70,
+      "launch_mass_kg": 3500.0,
+      "sim_mass_kg": 875,
+      "sim_area_m2": 0.5027,
+      "sim_cd": 0.25,
+      "v0_effective": 3020.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        100.0,
+        800.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3500kg start"
+    },
+    "Hyunmoo-3C": {
+      "launcher": "Hyunmoo-3C (Cruise)",
+      "launcher_id": 71,
+      "launch_mass_kg": 1500.0,
+      "sim_mass_kg": 1500,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        1500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "South Korean cruise"
+    },
+    "Hyunmoo-4": {
+      "launcher": "Hyunmoo-4 (SRBM)",
+      "launcher_id": 72,
+      "launch_mass_kg": 3500.0,
+      "sim_mass_kg": 875,
+      "sim_area_m2": 0.5027,
+      "sim_cd": 0.25,
+      "v0_effective": 1500.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 3.0,
+      "range_km": [
+        200.0,
+        800.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3500kg start"
+    },
+    "Hyunmoo-5": {
+      "launcher": "Hyunmoo-5 (IRBM)",
+      "launcher_id": 73,
+      "launch_mass_kg": 8000.0,
+      "sim_mass_kg": 2000,
+      "sim_area_m2": 0.7854,
+      "sim_cd": 0.25,
+      "v0_effective": 2000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        500.0,
+        3000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "8000kg start, bunker buster"
+    },
+    "Type-12": {
+      "launcher": "Type-12 (Cruise)",
+      "launcher_id": 74,
+      "launch_mass_kg": 700.0,
+      "sim_mass_kg": 700,
+      "sim_area_m2": 0.0962,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        50.0,
+        1200.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Japanese ASM"
+    },
+    "ASM-3": {
+      "launcher": "ASM-3 (hipersoniczna)",
+      "launcher_id": 75,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.0962,
+      "sim_cd": 0.02,
+      "v0_effective": 1000.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Japanese supersonic ASM"
+    },
+    "Hsiung-Feng-III": {
+      "launcher": "Hsiung-Feng III",
+      "launcher_id": 76,
+      "launch_mass_kg": 680.0,
+      "sim_mass_kg": 680,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 1000.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        30.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Taiwanese supersonic"
+    },
+    "Yun-Feng": {
+      "launcher": "Yun-Feng (LACM)",
+      "launcher_id": 77,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 50.0,
+      "range_km": [
+        100.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Taiwanese cruise"
+    },
+    "CSS-5": {
+      "launcher": "CSS-5 (DF-21) ☢",
+      "launcher_id": 78,
+      "launch_mass_kg": 14700.0,
+      "sim_mass_kg": 3675,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.18,
+      "v0_effective": 4250,
+      "trajectory": "ballistic_missile",
+      "cep_m": 300.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "DF-21 export"
+    },
+    "SS-300": {
+      "launcher": "SS-300 Astros",
+      "launcher_id": 79,
+      "launch_mass_kg": 600.0,
+      "sim_mass_kg": 65,
+      "sim_area_m2": 0.0117,
+      "sim_cd": 0.35,
+      "v0_effective": 800.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        50.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "122mm"
+    },
+    "Astros-II": {
+      "launcher": "Astros II MRL",
+      "launcher_id": 80,
+      "launch_mass_kg": 150.0,
+      "sim_mass_kg": 152,
+      "sim_area_m2": 0.0254,
+      "sim_cd": 0.38,
+      "v0_effective": 600.0,
+      "trajectory": "artillery",
+      "cep_m": 50.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Brazilian 180mm"
+    },
+    "OTR-21-UA": {
+      "launcher": "OTR-21 Tochka-U (UA)",
+      "launcher_id": 81,
+      "launch_mass_kg": 2000.0,
+      "sim_mass_kg": 560,
+      "sim_area_m2": 0.3318,
+      "sim_cd": 0.3,
+      "v0_effective": 900.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 150.0,
+      "range_km": [
+        15.0,
+        185.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Ukrainian Tochka-U"
+    },
+    "Vilkha": {
+      "launcher": "Vilkha (Ukraina)",
+      "launcher_id": 82,
+      "launch_mass_kg": 800.0,
+      "sim_mass_kg": 160.0,
+      "sim_area_m2": 0.0707,
+      "sim_cd": 0.2,
+      "v0_effective": 900.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 1.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "300mm GPS guided"
+    },
+    "Neptune": {
+      "launcher": "Neptune (Ukraina)",
+      "launcher_id": 83,
+      "launch_mass_kg": 870.0,
+      "sim_mass_kg": 870,
+      "sim_area_m2": 0.1134,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "R-360: 870kg"
+    },
+    "Grom-2": {
+      "launcher": "Grom-2 (SRBM)",
+      "launcher_id": 84,
+      "launch_mass_kg": 4500.0,
+      "sim_mass_kg": 1125,
+      "sim_area_m2": 0.5027,
+      "sim_cd": 0.25,
+      "v0_effective": 1000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        70.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4500kg start"
+    },
+    "Hrim-2": {
+      "launcher": "Hrim-2 (MRBM)",
+      "launcher_id": 85,
+      "launch_mass_kg": 5000.0,
+      "sim_mass_kg": 1250,
+      "sim_area_m2": 0.6362,
+      "sim_cd": 0.25,
+      "v0_effective": 1500.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        70.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "5000kg start"
+    },
+    "RBS-15": {
+      "launcher": "RBS-15 Mk3",
+      "launcher_id": 86,
+      "launch_mass_kg": 800.0,
+      "sim_mass_kg": 800,
+      "sim_area_m2": 0.1521,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        10.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Swedish AShM"
+    },
+    "Scud-D": {
+      "launcher": "Scud-D (Egipt)",
+      "launcher_id": 87,
+      "launch_mass_kg": 5900.0,
+      "sim_mass_kg": 1950,
+      "sim_area_m2": 0.6082,
+      "sim_cd": 0.28,
+      "v0_effective": 1500.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 450.0,
+      "range_km": [
+        50.0,
+        700.0
+      ],
+      "blast_radius_m": 50,
+      "note": "6500kg start, guided RV"
+    },
+    "M-600": {
+      "launcher": "M-600 (Syria)",
+      "launcher_id": 88,
+      "launch_mass_kg": 3450.0,
+      "sim_mass_kg": 860,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.25,
+      "v0_effective": 900.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        30.0,
+        300.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Syrian Fateh kopia"
+    },
+    "Tishreen": {
+      "launcher": "Tishreen (Syria)",
+      "launcher_id": 89,
+      "launch_mass_kg": 985.0,
+      "sim_mass_kg": 1800,
+      "sim_area_m2": 0.6082,
+      "sim_cd": 0.3,
+      "v0_effective": 800.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 200.0,
+      "range_km": [
+        50.0,
+        700.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Scud variant"
+    },
+    "BADR-2000": {
+      "launcher": "BADR-2000 (SA)",
+      "launcher_id": 90,
+      "launch_mass_kg": 4000.0,
+      "sim_mass_kg": 1200,
+      "sim_area_m2": 0.5027,
+      "sim_cd": 0.28,
+      "v0_effective": 1000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 300.0,
+      "range_km": [
+        200.0,
+        750.0
+      ],
+      "blast_radius_m": 50,
+      "note": "4800kg start"
+    },
+    "C-802": {
+      "launcher": "C-802 (eksport CN)",
+      "launcher_id": 91,
+      "launch_mass_kg": 715.0,
+      "sim_mass_kg": 715,
+      "sim_area_m2": 0.1018,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        20.0,
+        400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Chinese AShM"
+    },
+    "C-705": {
+      "launcher": "C-705 (eksport CN)",
+      "launcher_id": 92,
+      "launch_mass_kg": 315.0,
+      "sim_mass_kg": 315,
+      "sim_area_m2": 0.0707,
+      "sim_cd": 0.02,
+      "v0_effective": 280.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        15.0,
+        280.0
+      ],
+      "blast_radius_m": 50,
+      "note": "smaller Chinese AShM"
+    },
+    "Emad": {
+      "launcher": "Emad (MRBM)",
+      "launcher_id": 93,
+      "launch_mass_kg": 16000.0,
+      "sim_mass_kg": 3520,
+      "sim_area_m2": 1.2272,
+      "sim_cd": 0.2,
+      "v0_effective": 4309,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "16000kg start"
+    },
+    "Ghadr": {
+      "launcher": "Ghadr (MRBM)",
+      "launcher_id": 94,
+      "launch_mass_kg": 17000.0,
+      "sim_mass_kg": 3740,
+      "sim_area_m2": 1.2272,
+      "sim_cd": 0.2,
+      "v0_effective": 4250,
+      "trajectory": "ballistic_missile",
+      "cep_m": 30.0,
+      "range_km": [
+        500.0,
+        2000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "17000kg start"
+    },
+    "B61-12": {
+      "launcher": "B61-12 (bomba) ☢",
+      "launcher_id": 95,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 280.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "GPS guided nuclear bomb: 320kg"
+    },
+    "W80-4": {
+      "launcher": "JASSM-ER (W80-4) ☢",
+      "launcher_id": 96,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 360,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "ALCM nuclear warhead"
+    },
+    "W76-2": {
+      "launcher": "Trident II (W76-2) ☢",
+      "launcher_id": 97,
+      "launch_mass_kg": 59000.0,
+      "sim_mass_kg": 280,
+      "sim_area_m2": 0.1886,
+      "sim_cd": 0.05,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 90.0,
+      "range_km": [
+        1000.0,
+        12000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mk-4A RV: ~280kg"
+    },
+    "F35-B61": {
+      "launcher": "F-35A (NATO) ☢",
+      "launcher_id": 98,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 500.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61-12 z F-35"
+    },
+    "B2-B61": {
+      "launcher": "B-2 Spirit (USA) ☢",
+      "launcher_id": 99,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 250.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61-12 z B-2"
+    },
+    "B2-B83": {
+      "launcher": "B-2 Spirit (USA) ☢",
+      "launcher_id": 99,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 1100,
+      "sim_area_m2": 0.1662,
+      "sim_cd": 0.2,
+      "v0_effective": 250.0,
+      "trajectory": "flat",
+      "cep_m": 50.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B83 nuclear: 1100kg"
+    },
+    "B21-B61": {
+      "launcher": "B-21 Raider (USA) ☢",
+      "launcher_id": 100,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 280.0,
+      "trajectory": "flat",
+      "cep_m": 20.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61-12 z B-21"
+    },
+    "F15-B61": {
+      "launcher": "F-15E Strike Eagle ☢",
+      "launcher_id": 101,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 600.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61-12 z F-15"
+    },
+    "Tornado-B61": {
+      "launcher": "Tornado IDS (NATO) ☢",
+      "launcher_id": 102,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 400.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61 z Tornado"
+    },
+    "Tu160-nuke": {
+      "launcher": "Tu-160 Blackjack ☢",
+      "launcher_id": 103,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 600.0,
+      "trajectory": "cruise",
+      "cep_m": 200.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Kh-102 nuklear"
+    },
+    "Tu95-nuke": {
+      "launcher": "Tu-95 Bear ☢",
+      "launcher_id": 104,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 180.0,
+      "trajectory": "cruise",
+      "cep_m": 300.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Kh-102 nuklear"
+    },
+    "H6K-nuke": {
+      "launcher": "H-6K (Chiny) ☢",
+      "launcher_id": 105,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 2400,
+      "sim_area_m2": 0.4301,
+      "sim_cd": 0.02,
+      "v0_effective": 220.0,
+      "trajectory": "cruise",
+      "cep_m": 300.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "CJ-20/Kh-101 kopia"
+    },
+    "LittleBoy": {
+      "launcher": "B-29 Superfortress ☢",
+      "launcher_id": 106,
+      "launch_mass_kg": 4400.0,
+      "sim_mass_kg": 4400,
+      "sim_area_m2": 0.397,
+      "sim_cd": 0.35,
+      "v0_effective": 140.0,
+      "trajectory": "flat",
+      "cep_m": 2000.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "WW2 uranium bomb: 4400kg"
+    },
+    "FatMan": {
+      "launcher": "B-29 Superfortress ☢",
+      "launcher_id": 106,
+      "launch_mass_kg": 4670.0,
+      "sim_mass_kg": 4670,
+      "sim_area_m2": 1.8241,
+      "sim_cd": 0.35,
+      "v0_effective": 140.0,
+      "trajectory": "flat",
+      "cep_m": 2000.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "WW2 plutonium bomb: 4670kg"
+    },
+    "Zircon": {
+      "launcher": "Zircon (3M22) 🇷🇺",
+      "launcher_id": 107,
+      "launch_mass_kg": 3000.0,
+      "sim_mass_kg": 3000,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 2778.0,
+      "trajectory": "cruise",
+      "cep_m": 2.0,
+      "range_km": [
+        100.0,
+        1000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mach 9 hypersonic"
+    },
+    "Burevestnik": {
+      "launcher": "Burevestnik ☢ 🇷🇺",
+      "launcher_id": 108,
+      "launch_mass_kg": 2000.0,
+      "sim_mass_kg": 2000,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        5000.0,
+        20000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "nuclear powered est"
+    },
+    "Tu22M-nuke": {
+      "launcher": "Tu-22M Backfire ☢ 🇷🇺",
+      "launcher_id": 109,
+      "launch_mass_kg": 1100.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 550.0,
+      "trajectory": "cruise",
+      "cep_m": 200.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Kh-22 nuklear"
+    },
+    "B52-ALCM": {
+      "launcher": "B-52 Stratofortress ☢ 🇺🇸",
+      "launcher_id": 110,
+      "launch_mass_kg": 1000.0,
+      "sim_mass_kg": 1300,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM-86B ALCM"
+    },
+    "B52-B61": {
+      "launcher": "B-52 Stratofortress ☢ 🇺🇸",
+      "launcher_id": 110,
+      "launch_mass_kg": 320.0,
+      "sim_mass_kg": 320,
+      "sim_area_m2": 0.0855,
+      "sim_cd": 0.15,
+      "v0_effective": 250.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "B61-12 z B-52"
+    },
+    "ALCM": {
+      "launcher": "AGM-86 ALCM ☢ 🇺🇸",
+      "launcher_id": 111,
+      "launch_mass_kg": 1430.0,
+      "sim_mass_kg": 1300,
+      "sim_area_m2": 0.2124,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM-86 ALCM"
+    },
+    "THAAD": {
+      "launcher": "THAAD 🇺🇸",
+      "launcher_id": 112,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.1075,
+      "sim_cd": 0.15,
+      "v0_effective": 2800.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "interceptor, kinetic kill"
+    },
+    "DF-27": {
+      "launcher": "DF-27 (IRBM) 🇨🇳",
+      "launcher_id": 113,
+      "launch_mass_kg": 20000.0,
+      "sim_mass_kg": 5000,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.16,
+      "v0_effective": 6000,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        3000.0,
+        8000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "HGV maneuver"
+    },
+    "DF-ZF": {
+      "launcher": "DF-ZF (HGV) 🇨🇳",
+      "launcher_id": 114,
+      "launch_mass_kg": 15000.0,
+      "sim_mass_kg": 3750,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.1,
+      "v0_effective": 3000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        1000.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "15000kg HGV"
+    },
+    "Hwasong-18": {
+      "launcher": "Hwasong-18 (ICBM) ☢ 🇰🇵",
+      "launcher_id": 115,
+      "launch_mass_kg": 80000.0,
+      "sim_mass_kg": 500,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.07,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1000.0,
+      "range_km": [
+        5000.0,
+        15000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "solid fuel ICBM"
+    },
+    "Hwasong-15": {
+      "launcher": "Hwasong-15 (ICBM) ☢ 🇰🇵",
+      "launcher_id": 116,
+      "launch_mass_kg": 80000.0,
+      "sim_mass_kg": 500,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.07,
+      "v0_effective": 7200,
+      "trajectory": "ballistic_missile",
+      "cep_m": 1000.0,
+      "range_km": [
+        5000.0,
+        13000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "large single RV est"
+    },
+    "Fattah": {
+      "launcher": "Fattah (hiperson.) 🇮🇷",
+      "launcher_id": 117,
+      "launch_mass_kg": 1400.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.1963,
+      "sim_cd": 0.15,
+      "v0_effective": 4000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        300.0,
+        1400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "1400kg start, hypersonic glide"
+    },
+    "Kheibar": {
+      "launcher": "Kheibar Shekan 🇮🇷",
+      "launcher_id": 118,
+      "launch_mass_kg": 3500.0,
+      "sim_mass_kg": 875,
+      "sim_area_m2": 0.2922,
+      "sim_cd": 0.25,
+      "v0_effective": 1700.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        100.0,
+        1450.0
+      ],
+      "blast_radius_m": 50,
+      "note": "3500kg start"
+    },
+    "Agni-VI": {
+      "launcher": "Agni-VI (ICBM) ☢ 🇮🇳",
+      "launcher_id": 119,
+      "launch_mass_kg": 55000.0,
+      "sim_mass_kg": 400,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7000,
+      "trajectory": "ballistic_missile",
+      "cep_m": 50.0,
+      "range_km": [
+        2000.0,
+        8000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV, RV est"
+    },
+    "BrahMos": {
+      "launcher": "BrahMos 🇮🇳",
+      "launcher_id": 120,
+      "launch_mass_kg": 3000.0,
+      "sim_mass_kg": 3000,
+      "sim_area_m2": 0.2827,
+      "sim_cd": 0.02,
+      "v0_effective": 880.0,
+      "trajectory": "cruise",
+      "cep_m": 1.0,
+      "range_km": [
+        50.0,
+        800.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Mach 2.8: 3000kg"
+    },
+    "Ababeel": {
+      "launcher": "Ababeel ☢ 🇵🇰",
+      "launcher_id": 121,
+      "launch_mass_kg": 17000.0,
+      "sim_mass_kg": 3825,
+      "sim_area_m2": 0.7854,
+      "sim_cd": 0.18,
+      "v0_effective": 4500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        700.0,
+        2200.0
+      ],
+      "blast_radius_m": 50,
+      "note": "17000kg, MIRV capable"
+    },
+    "Raad": {
+      "launcher": "Ra'ad ALCM ☢ 🇵🇰",
+      "launcher_id": 122,
+      "launch_mass_kg": 500.0,
+      "sim_mass_kg": 500,
+      "sim_area_m2": 0.1018,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 10.0,
+      "range_km": [
+        50.0,
+        350.0
+      ],
+      "blast_radius_m": 50,
+      "note": "Pakistani ALCM"
+    },
+    "Kh-101": {
+      "launcher": "Kh-101 (cruise) 🇷🇺",
+      "launcher_id": 123,
+      "launch_mass_kg": 2400.0,
+      "sim_mass_kg": 2400,
+      "sim_area_m2": 0.4301,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        100.0,
+        5000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "2400kg"
+    },
+    "Kh-102": {
+      "launcher": "Kh-102 ☢ (cruise) 🇷🇺",
+      "launcher_id": 124,
+      "launch_mass_kg": 2400.0,
+      "sim_mass_kg": 2400,
+      "sim_area_m2": 0.4301,
+      "sim_cd": 0.02,
+      "v0_effective": 250.0,
+      "trajectory": "cruise",
+      "cep_m": 5.0,
+      "range_km": [
+        100.0,
+        5000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "nuclear Kh-101"
+    },
+    "ARRW": {
+      "launcher": "AGM-183 ARRW 🇺🇸",
+      "launcher_id": 125,
+      "launch_mass_kg": 900.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.0962,
+      "sim_cd": 0.08,
+      "v0_effective": 6000.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 5.0,
+      "range_km": [
+        200.0,
+        1600.0
+      ],
+      "blast_radius_m": 50,
+      "note": "AGM-183A hypersonic glide"
+    },
+    "B1B-conv": {
+      "launcher": "B-1B Lancer ✈️ 🇺🇸",
+      "launcher_id": 126,
+      "launch_mass_kg": 86000.0,
+      "sim_mass_kg": 900,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.2,
+      "v0_effective": 490.0,
+      "trajectory": "flat",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "konwencjonalna bomba B-1B"
+    },
+    "JL-2": {
+      "launcher": "JL-2 (SLBM) ☢ 🇨🇳",
+      "launcher_id": 127,
+      "launch_mass_kg": 42000.0,
+      "sim_mass_kg": 350,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 6800,
+      "trajectory": "ballistic_missile",
+      "cep_m": 300.0,
+      "range_km": [
+        3000.0,
+        7400.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV, per-RV est"
+    },
+    "JL-3": {
+      "launcher": "JL-3 (SLBM) ☢ 🇨🇳",
+      "launcher_id": 128,
+      "launch_mass_kg": 50000.0,
+      "sim_mass_kg": 360,
+      "sim_area_m2": 0.229,
+      "sim_cd": 0.06,
+      "v0_effective": 7500,
+      "trajectory": "ballistic_missile",
+      "cep_m": 100.0,
+      "range_km": [
+        3000.0,
+        9000.0
+      ],
+      "blast_radius_m": 50,
+      "note": "MIRV, per-RV est"
+    },
+    "Pukguksong-3": {
+      "launcher": "Pukguksong-3 ☢ 🇰🇵",
+      "launcher_id": 129,
+      "launch_mass_kg": 23800.0,
+      "sim_mass_kg": 5950,
+      "sim_area_m2": 1.5394,
+      "sim_cd": 0.18,
+      "v0_effective": 5480.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 200.0,
+      "range_km": [
+        300.0,
+        2500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "23800kg SLBM"
+    },
+    "K-4": {
+      "launcher": "K-4 (SLBM) ☢ 🇮🇳",
+      "launcher_id": 130,
+      "launch_mass_kg": 17000.0,
+      "sim_mass_kg": 3825,
+      "sim_area_m2": 1.3273,
+      "sim_cd": 0.18,
+      "v0_effective": 5480.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 10.0,
+      "range_km": [
+        500.0,
+        3500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "17000kg SLBM"
+    },
+    "K-15": {
+      "launcher": "K-15 Sagarika ☢ 🇮🇳",
+      "launcher_id": 131,
+      "launch_mass_kg": 6000.0,
+      "sim_mass_kg": 1500,
+      "sim_area_m2": 0.4301,
+      "sim_cd": 0.22,
+      "v0_effective": 2961.0,
+      "trajectory": "ballistic_missile",
+      "cep_m": 200.0,
+      "range_km": [
+        100.0,
+        750.0
+      ],
+      "blast_radius_m": 50,
+      "note": "6000kg SLBM"
+    },
+    "ASMP-A": {
+      "launcher": "ASMP-A ☢ 🇫🇷",
+      "launcher_id": 132,
+      "launch_mass_kg": 860.0,
+      "sim_mass_kg": 860,
+      "sim_area_m2": 0.1134,
+      "sim_cd": 0.02,
+      "v0_effective": 900.0,
+      "trajectory": "cruise",
+      "cep_m": 30.0,
+      "range_km": [
+        80.0,
+        500.0
+      ],
+      "blast_radius_m": 50,
+      "note": "French nuclear ASMP-A"
+    },
+    "Rafale-ASMP": {
+      "launcher": "Rafale F3 ☢ ✈️ 🇫🇷",
+      "launcher_id": 133,
+      "launch_mass_kg": 860.0,
+      "sim_mass_kg": 860,
+      "sim_area_m2": 0.1134,
+      "sim_cd": 0.02,
+      "v0_effective": 550.0,
+      "trajectory": "cruise",
+      "cep_m": 30.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "ASMP-A nuklear"
+    },
+    "Vulcan-WE177": {
+      "launcher": "Avro Vulcan B2 ☢ ✈️ 🇬🇧",
+      "launcher_id": 134,
+      "launch_mass_kg": 9750.0,
+      "sim_mass_kg": 430,
+      "sim_area_m2": 0.1134,
+      "sim_cd": 0.2,
+      "v0_effective": 270.0,
+      "trajectory": "flat",
+      "cep_m": 500.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "British WE177 nuklear ~430kg"
+    },
+    "M109-HE": {
+      "launcher": "M109A7 Paladin 🇺🇸",
+      "launcher_id": 135,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M109 HE"
+    },
+    "M109-EXCAL": {
+      "launcher": "M109A7 Paladin 🇺🇸",
+      "launcher_id": 135,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 827.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from M109"
+    },
+    "PzH-HE": {
+      "launcher": "PzH 2000 🇩🇪",
+      "launcher_id": 136,
+      "launch_mass_kg": 43.5,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 945.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm PzH2000 HE"
+    },
+    "PzH-EXCAL": {
+      "launcher": "PzH 2000 🇩🇪",
+      "launcher_id": 136,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 945.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from PzH2000"
+    },
+    "AS90-HE": {
+      "launcher": "AS-90 🇬🇧",
+      "launcher_id": 137,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm AS90 HE"
+    },
+    "CAESAR-HE": {
+      "launcher": "CAESAR (155mm) 🇫🇷",
+      "launcher_id": 138,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 930.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm CAESAR HE"
+    },
+    "CAESAR-EXCAL": {
+      "launcher": "CAESAR (155mm) 🇫🇷",
+      "launcher_id": 138,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 930.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from CAESAR"
+    },
+    "Archer-HE": {
+      "launcher": "Archer (FH77BW) 🇸🇪",
+      "launcher_id": 139,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 945.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Archer HE"
+    },
+    "Archer-EXCAL": {
+      "launcher": "Archer (FH77BW) 🇸🇪",
+      "launcher_id": 139,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 945.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from Archer"
+    },
+    "K9-HE": {
+      "launcher": "K9 Thunder 🇰🇷",
+      "launcher_id": 140,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm K9 HE"
+    },
+    "K9-EXCAL": {
+      "launcher": "K9 Thunder 🇰🇷",
+      "launcher_id": 140,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 900.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from K9"
+    },
+    "Msta-HE": {
+      "launcher": "2S19 Msta-S 🇷🇺",
+      "launcher_id": 141,
+      "launch_mass_kg": 43.5,
+      "sim_mass_kg": 43.6,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.4,
+      "v0_effective": 828.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm HE Msta"
+    },
+    "Msta-Krasnopol": {
+      "launcher": "2S19 Msta-S 🇷🇺",
+      "launcher_id": 141,
+      "launch_mass_kg": 50.0,
+      "sim_mass_kg": 50.0,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.22,
+      "v0_effective": 828.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 2.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm laser guided"
+    },
+    "Akacja-HE": {
+      "launcher": "2S3 Akacja 🇷🇺",
+      "launcher_id": 142,
+      "launch_mass_kg": 43.5,
+      "sim_mass_kg": 43.6,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.4,
+      "v0_effective": 655.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm 2S3 Akacja HE"
+    },
+    "Pion-HE": {
+      "launcher": "2S7 Pion 🇷🇺",
+      "launcher_id": 143,
+      "launch_mass_kg": 110.0,
+      "sim_mass_kg": 110.0,
+      "sim_area_m2": 0.0324,
+      "sim_cd": 0.38,
+      "v0_effective": 960.0,
+      "trajectory": "artillery",
+      "cep_m": 300.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "203mm 2S7 Pion HE"
+    },
+    "Koalicja-HE": {
+      "launcher": "2S35 Koalicja 🇷🇺",
+      "launcher_id": 144,
+      "launch_mass_kg": 43.5,
+      "sim_mass_kg": 43.6,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.4,
+      "v0_effective": 1100.0,
+      "trajectory": "artillery",
+      "cep_m": 50.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm 2S35 Koalicja HE"
+    },
+    "Koalicja-Prec": {
+      "launcher": "2S35 Koalicja 🇷🇺",
+      "launcher_id": 144,
+      "launch_mass_kg": 50.0,
+      "sim_mass_kg": 50.0,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.22,
+      "v0_effective": 1100.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 2.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm precision"
+    },
+    "PLZ05-HE": {
+      "launcher": "PLZ-05 (155mm) 🇨🇳",
+      "launcher_id": 145,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 930.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm PLZ-05 HE"
+    },
+    "PCL181-HE": {
+      "launcher": "PCL-181 (155mm) 🇨🇳",
+      "launcher_id": 146,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 930.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm PCL-181 HE"
+    },
+    "ATHOS-HE": {
+      "launcher": "ATHOS 2052 🇮🇱",
+      "launcher_id": 147,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm ATHOS HE"
+    },
+    "Soltam-HE": {
+      "launcher": "Soltam M-71 🇮🇱",
+      "launcher_id": 148,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Soltam HE"
+    },
+    "Firtina-HE": {
+      "launcher": "T-155 Firtina 🇹🇷",
+      "launcher_id": 149,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Firtina HE"
+    },
+    "ATAGS-HE": {
+      "launcher": "ATAGS (155mm) 🇮🇳",
+      "launcher_id": 150,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm ATAGS HE"
+    },
+    "Dhanush-HE": {
+      "launcher": "Dhanush (155mm) 🇮🇳",
+      "launcher_id": 151,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Dhanush HE"
+    },
+    "Krab2-HE": {
+      "launcher": "Krab (Kopia) 🇵🇱",
+      "launcher_id": 152,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Krab2 HE"
+    },
+    "Krab2-EXCAL": {
+      "launcher": "Krab (Kopia) 🇵🇱",
+      "launcher_id": 152,
+      "launch_mass_kg": 48.0,
+      "sim_mass_kg": 48.0,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.25,
+      "v0_effective": 827.0,
+      "trajectory": "guided_artillery",
+      "cep_m": 4.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Excalibur from Krab2"
+    },
+    "Bohdana-HE": {
+      "launcher": "2S22 Bohdana 🇺🇦",
+      "launcher_id": 153,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Bohdana HE"
+    },
+    "Type99-HE": {
+      "launcher": "Type 99 (155mm) 🇯🇵",
+      "launcher_id": 154,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Type-99 HE"
+    },
+    "K55-HE": {
+      "launcher": "K55A1 (155mm) 🇰🇷",
+      "launcher_id": 155,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm K55 HE"
+    },
+    "AS90AU-HE": {
+      "launcher": "AS-90 Braveheart 🇦🇺",
+      "launcher_id": 156,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm AS90 AU HE"
+    },
+    "M109BR-HE": {
+      "launcher": "M109 BR (155mm) 🇧🇷",
+      "launcher_id": 157,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M109 BR HE"
+    },
+    "Koksan-HE": {
+      "launcher": "Koksan M-1978 🇰🇵",
+      "launcher_id": 158,
+      "launch_mass_kg": 100.0,
+      "sim_mass_kg": 110.0,
+      "sim_area_m2": 0.0227,
+      "sim_cd": 0.38,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 300.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "170mm M-1978 Koksan HE"
+    },
+    "Hoveyzeh-HE": {
+      "launcher": "Hoveyzeh (155mm) 🇮🇷",
+      "launcher_id": 159,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 1500,
+      "sim_area_m2": 0.181,
+      "sim_cd": 0.02,
+      "v0_effective": 827.0,
+      "trajectory": "cruise",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "Hoveyzeh cruise, nie artyleria!"
+    },
+    "Raad122-HE": {
+      "launcher": "Raad (122mm) 🇮🇷",
+      "launcher_id": 160,
+      "launch_mass_kg": 27.3,
+      "sim_mass_kg": 21.8,
+      "sim_area_m2": 0.0117,
+      "sim_cd": 0.4,
+      "v0_effective": 690.0,
+      "trajectory": "artillery",
+      "cep_m": 100.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "122mm Raad HE"
+    },
+    "M109PK-HE": {
+      "launcher": "M109 Pakistan 🇵🇰",
+      "launcher_id": 161,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M109 PK HE"
+    },
+    "M109SA-HE": {
+      "launcher": "M109 Saudi 🇸🇦",
+      "launcher_id": 162,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M109 SA HE"
+    },
+    "T69-HE": {
+      "launcher": "T-69 (155mm) 🇹🇼",
+      "launcher_id": 163,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm T-69 HE"
+    },
+    "PzH2000GR-HE": {
+      "launcher": "PzH 2000 🇬🇷",
+      "launcher_id": 164,
+      "launch_mass_kg": 43.5,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 945.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm PzH2000 GR HE"
+    },
+    "K9NO-HE": {
+      "launcher": "K9 Thunder 🇳🇴",
+      "launcher_id": 165,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm K9 NO HE"
+    },
+    "K9FI-HE": {
+      "launcher": "K9 Thunder 🇫🇮",
+      "launcher_id": 166,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm K9 FI HE"
+    },
+    "M109CA-HE": {
+      "launcher": "M109A4 Canada 🇨🇦",
+      "launcher_id": 167,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M109 CA HE"
+    },
+    "Gvozdika-HE": {
+      "launcher": "2S1 Gvozdika 🇮🇶",
+      "launcher_id": 168,
+      "launch_mass_kg": 15.5,
+      "sim_mass_kg": 21.8,
+      "sim_area_m2": 0.0117,
+      "sim_cd": 0.4,
+      "v0_effective": 690.0,
+      "trajectory": "artillery",
+      "cep_m": 200.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "122mm 2S1 Gvozdika HE"
+    },
+    "Gvozdika2-HE": {
+      "launcher": "2S1 Gvozdika 🇷🇺",
+      "launcher_id": 169,
+      "launch_mass_kg": 15.5,
+      "sim_mass_kg": 21.8,
+      "sim_area_m2": 0.0117,
+      "sim_cd": 0.4,
+      "v0_effective": 690.0,
+      "trajectory": "artillery",
+      "cep_m": 200.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "122mm 2S1 Gvozdika-2 HE"
+    },
+    "D30-HE": {
+      "launcher": "D-30 (122mm) 🇸🇾",
+      "launcher_id": 170,
+      "launch_mass_kg": 21.8,
+      "sim_mass_kg": 21.8,
+      "sim_area_m2": 0.0117,
+      "sim_cd": 0.4,
+      "v0_effective": 690.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "122mm D-30 HE"
+    },
+    "M198-HE": {
+      "launcher": "M198 (155mm) 🇺🇸",
+      "launcher_id": 171,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm M198 HE"
+    },
+    "FH70-HE": {
+      "launcher": "FH-70 (155mm) 🇮🇹",
+      "launcher_id": 172,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm FH70 HE"
+    },
+    "K9AU-HE": {
+      "launcher": "K9 Thunder 🇦🇺",
+      "launcher_id": 173,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 900.0,
+      "trajectory": "artillery",
+      "cep_m": 120.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm K9 AU HE"
+    },
+    "Zuzana-HE": {
+      "launcher": "ZUZANA 2 🇸🇰",
+      "launcher_id": 174,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 945.0,
+      "trajectory": "artillery",
+      "cep_m": 80.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Zuzana HE"
+    },
+    "Dana-HE": {
+      "launcher": "Dana M2 🇨🇿",
+      "launcher_id": 175,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 152,
+      "sim_area_m2": 0.0181,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "152mm Dana HE (nie 155!)"
+    },
+    "KrabUA-HE": {
+      "launcher": "Krab (UA) 🇺🇦",
+      "launcher_id": 176,
+      "launch_mass_kg": 43.2,
+      "sim_mass_kg": 43.2,
+      "sim_area_m2": 0.0189,
+      "sim_cd": 0.4,
+      "v0_effective": 827.0,
+      "trajectory": "artillery",
+      "cep_m": 150.0,
+      "range_km": [
+        0,
+        9999
+      ],
+      "blast_radius_m": 50,
+      "note": "155mm Krab UA HE"
+    }
+  }
+}

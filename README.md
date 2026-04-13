@@ -250,9 +250,8 @@ pip install flask redis requests python-dotenv reportlab
 Create `.env`:
 ```
 WEATHER_API_KEY=your_openweathermap_key
+CESIUM_TOKEN=your_cesium_ion_token
 ```
-
-Update Cesium Ion token in `Balistic_input.py`.
 
 ```bash
 # Window 1 — C# processor
@@ -376,9 +375,8 @@ pip install flask redis requests python-dotenv reportlab
 Utwórz `.env`:
 ```
 WEATHER_API_KEY=twój_klucz_openweathermap
+CESIUM_TOKEN=twój_token_cesium_ion
 ```
-
-Zaktualizuj token Cesium Ion w `Balistic_input.py`.
 
 ```bash
 # Okno 1 — procesor C#
