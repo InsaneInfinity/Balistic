@@ -21,8 +21,8 @@
 
 | | |
 |---|---|
-| ![DF-41 ICBM 3D](china.png) 🌍 DF-41 ICBM — CesiumJS 3D globe trajectory | ![Nuclear strikes](china2.png) ☢️ 4× DF-41 simultaneous nuclear strikes |
-| ![Terrain masking Islamabad](israel.png) 🏔️ SRTM terrain masking — Margalla Hills block blast wave | ![Fallout polygon](israelfallout.png) 🌬️ Corrected fallout polygon — wind-aligned ellipse |
+| ![Islamabad SRTM](Islamabad.png) 🏔️ **Islamabad** — Margalla Hills block blast wave NW, flat plain unobstructed SE | ![Las Vegas Red Rock](lasvegas.png) 🏜️ **Las Vegas / Red Rock Canyon** — canyon walls clip zones west, city open east |
+| ![Jerusalem](jerozolima.png) 🕌 **Jerusalem** — Judean Desert extends zones east, Judean Hills clip west | ![DF-41 ICBM 3D](china.png) 🌍 **DF-41 ICBM** — CesiumJS 3D globe trajectory |
 
 ---
 
